@@ -1,10 +1,26 @@
 /*
- * Not a board target. Zephyr does not auto-apply this name.
- * Signals that still need a pin (all PIN_TBD, no numbers in this file):
- *   UART_DBG TX, UART_DBG RX, SWDIO, SWCLK, RESET
- *   LED_RGB_EN, LED_RGB_DATA, LED_RGB_CLK
- *   VBAT_SENSE
- * See ../HARDWARE_NEEDED.md.
+ * Draft bind only. Zephyr does not auto-apply this filename.
+ * app.overlay stays empty so the DK smoke build does not mux these pins.
+ *
+ * Allowed (HARDWARE_NEEDED.md): four lamp pins + VBAT_SENSE ADC.
+ *   LED_RGB_EN   P2.08   logical Idle=0 is frozen; load-switch polarity is not
+ *   LED_RGB_DATA P2.06
+ *   LED_RGB_CLK  P2.07   single-wire fit is DNP
+ *   LED_STATUS   P0.01
+ *   VBAT_SENSE   P1.06 / AIN2
+ *                battery-alarm ADC, not the internal NRF_SAADC_VBAT rail
+ *                divider resistors and gain are not set
+ *
+ * Not present: UART_DBG, SWD SoC pins, CONTAM_TP, other sensors.
+ * No GPIO_ACTIVE_* flag: the cells below are port and pin only.
  */
 / {
+	chaoji_evt_draft {
+		led-rgb-en = <2 8>;
+		led-rgb-data = <2 6>;
+		led-rgb-clk = <2 7>;
+		led-status = <0 1>;
+		vbat-sense = <1 6>;
+		vbat-sense-ain = <2>;
+	};
 };

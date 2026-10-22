@@ -9,7 +9,7 @@
 | `ncs_board_build` | **false** |
 | 本机是否跑过 `west build` | **否**。2026-10-22 检查：无 `west`、无 `arm-zephyr-eabi-gcc`、无 Zephyr SDK |
 | 可烧录 EVT 镜像 | **没有**。DK 冒烟目标即使将来编过，也不是样机镜像 |
-| 脚号 | **未写入** overlay。确认单：[HARDWARE_NEEDED.md](HARDWARE_NEEDED.md) |
+| 脚号 | 草案五处在 `boards/evt_pins_placeholder.overlay`（不自动套用）。`app.overlay` 无脚号。确认单：[HARDWARE_NEEDED.md](HARDWARE_NEEDED.md) |
 
 宿主包 `fw-hush-relay-0.1.0-evt` 的说明仍在 [`firmware/README.md`](../README.md)。那份文件进了源码包哈希，本骨架不改它。那里第 7 点仍写「没有 west 工程」——指的是当时的宿主包。west 工程在本目录，且 **不** 进 `dist/*.tar.gz`。
 
@@ -25,13 +25,13 @@
 |---|---|
 | `west.yml` | 指向 nRF Connect SDK **v3.4.1**（`nrfconnect/sdk-nrf`，2026-09-17 的发行标签）。不把 SDK 放进本仓库 |
 | `CMakeLists.txt` `prj.conf` `Kconfig` `VERSION` `src/main.c` | 可被 `west build` 指向的应用。`VERSION` 的 `EXTRAVERSION=skeleton` 只标识这个空壳，不是 `fw-hush-relay-0.1.0-evt` |
-| `app.overlay` | Zephyr 会自动带上。里面只有注释，没有 GPIO |
-| `boards/evt_pins_placeholder.overlay` | **不会**被自动套用。名字对不上任何板。脚位仍是占位 |
+| `app.overlay` | Zephyr 会自动带上。不写脚号，DK 冒烟不复用 EVT 草案脚 |
+| `boards/evt_pins_placeholder.overlay` | **不会**被自动套用。只记四只灯脚 + `VBAT_SENSE` AIN2。无极性、无分压电阻 |
 | `src/main.c` | 打印三行说明后返回。不调用 `fw_*`，不打钩子 JSON |
 
 `CONFIG_CHAOJI_SMOKE_EVT_IMAGE` 默认关闭。打开它会在编译期 `#error`，避免把空壳说成 EVT 镜像。
 
-产品模组方向是 Raytac AN54LQ-15。下面的板目标 `nrf54l15dk/nrf54l15/cpuapp` 是 Nordic DK（PCA10156）的 **工具链冒烟目标**，取自 [NCS 3.4.1 板级说明](https://docs.nordicsemi.com/bundle/ncs-3.4.1/page/nrf/app_dev/board_names.html)。DK 的引脚不是 EVT 网表。在 `HARDWARE_NEEDED.md` 确认之前，没有自定义板目标。
+产品模组方向是 Raytac AN54LQ-15。下面的板目标 `nrf54l15dk/nrf54l15/cpuapp` 是 Nordic DK（PCA10156）的 **工具链冒烟目标**，取自 [NCS 3.4.1 板级说明](https://docs.nordicsemi.com/bundle/ncs-3.4.1/page/nrf/app_dev/board_names.html)。DK 的引脚不是 EVT 网表。没有自定义板目标。草案脚号只在不被自动套用的 overlay 里，见 `HARDWARE_NEEDED.md`。 |
 
 未做、本 Issue 的关闭条件也还没满足：
 

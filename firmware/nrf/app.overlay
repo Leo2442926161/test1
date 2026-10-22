@@ -1,7 +1,8 @@
 /*
- * Auto-loaded by Zephyr. Intentionally assigns no pins.
- * EVT GPIO numbers stay in HARDWARE_NEEDED.md until @硬件 confirms them.
- * Do not copy ICD pin-draft numbers into this file.
+ * Auto-loaded by Zephyr for the DK smoke build. Assigns no pins.
+ * The five draft binds (four lamp pins + VBAT AIN2) are only in
+ * boards/evt_pins_placeholder.overlay, which this build does not select.
+ * UART_DBG and every other net stay PIN_TBD. See HARDWARE_NEEDED.md.
  */
 / {
 };
