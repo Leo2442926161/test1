@@ -246,3 +246,20 @@
 | 同步 | `/workspace/01_市场产品/` ↔ `超级烟感_项目资料包_v0.1/01_市场产品/` |
 
 **— 市场产品 · PRD v0.1 正式 · 2026-10-22 Asia/Shanghai —**
+
+---
+
+## 附录 B · CLAIM/Matter Listing 回写（抽检 v0.1 · 2026-10-22）
+
+对齐 `02_工程/超级烟感_文档抽检_CLAIM_MATTER_v0.1.md`（0 Fail / 待补 7）。市场产品已回写：
+
+| 待补点 | 处理 |
+|--------|------|
+| Listing Hardwired TBD 歧义 | Listing v0.2.2 Title→**Battery-powered**；Backend 去 hardwired |
+| 无线 vs 有线分列 | Listing Bullet：**same-brand wireless** whole-home；明示 **not** wired AC interconnect / 非消防总线 |
+| 烟 Hush / CO 禁静音正向句 | Listing Bullet：**Temporary hush for smoke only; CO cannot be silenced** |
+| Nest 房间剧本 | Listing/PRD IP：**禁** Heads-Up /「烟雾在×房间」；不点名 Nest |
+| 认证 §4 #4 | 主稿回写「Hush 仅烟、CO 禁静音」 |
+| 说明书 M6/C6 | N-06 草案已出；完整用户手册仍 G3 前补（包装/铭牌仍待） |
+
+权威 Listing 草稿：`超级烟感-Amazon-US-EU-Listing草稿.md` **v0.2.2**（**仍不上架**）。

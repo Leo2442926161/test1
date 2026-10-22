@@ -1,8 +1,7 @@
-# 超级烟感 · Amazon Listing 草稿 v0.2.11
+# 超级烟感 · Amazon Listing 草稿 v0.2.2
 
-> **状态**：草稿 **v0.2.2** · 暂不上架 · 前台不写死价
-> **体验话术**：白壳主视觉；**64 段可寻址 RGB** + 软件旋转/流动路径光（Leo 2026-10-22）；深色备选；**仍不上架**；不写 Nest  
-> **卖点审**：市场产品有条件通过 → 本版已改三处  
+> **状态**：草稿 v0.2.2 · 暂不上架 · 不写售价  
+> **卖点审**：市场产品有条件通过；**CLAIM 抽检待补已回写**（无线/有线分列 · 烟 Hush/CO 禁静音 · 禁 Nest 房间剧本）  
 > **主轴 ≤3**：抗误报｜Smoke+CO（仅 SKU-EX）｜Matter（状态/通知，≠消防互联）  
 > **前台**：不点名 Nest/Google；好看/更强对标留 ID/研发  
 > **日期**：2026-10-22 Asia/Shanghai
@@ -16,6 +15,10 @@
 | ① | UKCA/语种仍写待市场产品 | **已锁**：EX 含 UKCA；首发 EN 主，包材 +DE+FR |
 | ② | A+/标题少用 Fewer False Alarms | 统一 **Reduced nuisance / cooking steam**；证据未冻结不绝对化 |
 | ③ | SKU-CN 一期若无 CO | **禁止**套用 EX「Smoke+CO」主轴 |
+| ④ | CLAIM C5：Hardwired TBD 歧义 | Title→**Battery-powered**；禁暗示 AC 硬线/有线互联已合规 |
+| ⑤ | CLAIM C5：无线级联分列 | Bullet 加同品牌 **wireless** whole-home；明示 **not** wired AC interconnect |
+| ⑥ | CLAIM H5：Hush 正向句 | 加 smoke temporary hush；明示 **CO cannot be silenced** |
+| ⑦ | Nest 房间剧本 | 纪律：禁 Heads-Up /「烟雾在×房间」；Listing 不点名 Nest |
 
 ---
 
@@ -26,6 +29,22 @@
 - 路径灯等体验 = 应达，不加第四主卖点。
 - 暂不上架、不写价；证书号仍 TBD。
 
+
+---
+
+## 0.1 CLAIM / Matter 文案红线（对齐抽检 v0.1 · Issue #2/#11）
+
+| 项 | Listing 写法 |
+|----|----------------|
+| 电源 | **Battery-powered** 主轨；**不写 Hardwired** 为已售能力 |
+| 无线级联 | 可写 same-brand **wireless** whole-home / interconnected alerts（离线） |
+| 有线 | **分列禁止**：不写已符合 UL/EN **wired** multiple-station / AC interconnect；与无线句必须分列 |
+| Matter | 仅 status/notifications；**≠** 级联；**≠** 消防互联 |
+| Hush | **正向**：temporary silence / hush **for smoke**；**CO cannot be silenced / 禁止静音 CO** |
+| Nest | **不点名**；禁 Heads-Up /「烟雾在×房间」房间名剧本 |
+
+抽检稿：`02_工程/超级烟感_文档抽检_CLAIM_MATTER_v0.1.md`（0 Fail / 待补项本版回写 C5·H5）。
+
 ---
 
 ## 1. SKU-EX · Amazon US（英文）
@@ -33,36 +52,37 @@
 ### 1.1 Title v0.2
 
 ```
-[Brand TBD] Smoke & Carbon Monoxide Detector, Reduced Nuisance Alarms from Cooking Steam, 2-in-1 Smoke + CO Alarm, Matter Compatible Smart Home Status Alerts [Hardwired/Battery TBD]
+[Brand TBD] Smoke & Carbon Monoxide Detector, Battery-Powered, Reduced Nuisance Alarms from Cooking Steam, 2-in-1 Smoke + CO Alarm, Matter Status Alerts, Same-Brand Wireless Home Alerts
 ```
+> **电源**：一期主轨 **Battery-powered（可换电）**。Title/Bullets **不写 Hardwired**；有线 AC / 有线多站 interconnect **不做、不宣称已合规**（TBD 仅作内部二期议题，不上架文案）。
 
-### 1.2 Bullets ×5（主卖点 ≤3；4–5 为安装/设计支撑）
+### 1.2 Bullets（主卖点 ≤3；其后为能力/安装支撑，不上第四主卖点）
 
 1. **Reduced nuisance alarms from everyday cooking steam** — Designed to cut down nuisance triggers from kitchen steam and bathroom humidity; sensing approach pending evidence freeze `[TBD]`.
 2. **2-in-1 smoke + carbon monoxide protection** — One unit for smoke and CO. Standards path: `[TBD — UL etc.]`.
-3. **Matter-compatible status and notifications** — View status and get notifications in supported Matter apps/hubs. **Not** a fire-system interconnect claim. Ecosystems: `[TBD]`.
-4. **Clear alerts when it counts** — Loud alarm `[dB TBD]` + optional **clear voice alerts** — short, hard event+action lines (voice muteable; siren/lights not). Matter notifications when paired. *(应达体验，非第四主卖点；句库软件定稿)*
-5. **Ultra-slim design + wow night path light** — Even thinner disc; **64-segment RGB thin ring** with proprietary **rotating / sweep** path light (not a Nest-like wide halo) + center status + linear guide; **wow directional path** at night and **pulsing alarm light language** for smoke/CO/fault. Standby near-off; always-on can be disabled. Power & warranty: `[TBD]`. *(应达体验，非第四主卖点；米数/秒数不上前台)*
+3. **Matter-compatible status and notifications** — View status and get notifications in supported Matter apps/hubs. **Not** a fire-system interconnect claim; **Matter ≠ wireless cascade**. Ecosystems: `[TBD]`.
+4. **Same-brand wireless whole-home alerts (offline-capable)** — When paired same-brand units detect smoke or CO, other paired units can follow with local sound/light **without cloud**. This is **wireless same-brand cascading**, **not** wired AC interconnect / multiple-station hardwire listing, and **not** a fire-department bus substitute.
+5. **Temporary hush for smoke only; CO cannot be silenced** — Smoke nuisance can use temporary hush (~9 min, auto-resume). **Carbon monoxide alarms cannot be user-silenced.** Siren/lights stay life-safety critical. No Nest-style “smoke in [room]” scripts on Listing.
+6. **Low-profile battery ceiling mount** — Lower-profile disc; thin edge-ring light language; **battery-powered** primary. Warranty / dB: `[TBD]`.
 
 ### 1.3 Backend（去重思路不变）
 
 ```
-fire alarm co alarm combination detector carbon monoxide alarm nuisance reduction kitchen steam bedroom hallway apartment smart matter hub thread hardwired ceiling mount life safety rental home night path light voice alert exit guidance low profile
+fire alarm co alarm combination detector carbon monoxide alarm nuisance reduction kitchen steam bedroom hallway apartment smart matter hub thread battery powered wireless interconnected same brand ceiling mount life safety rental home
 ```
+> Backend：**去掉 hardwired**；可用 `battery powered` / `wireless` / `same brand`。勿堆 `hardwired interconnect` 以免与无线级联混淆。
 
 ### 1.4 A+ 模块标题 v0.2（已去 Fewer False Alarms）
 
 1. Reduced Nuisance Alarms from Cooking Steam  
 2. Smoke + CO in One Device  
-3. Matter Status and Notifications  
-4. Ultra-Slim Profile — Built to Disappear on the Ceiling  
-5. Premium RGB Path Light — Rotating Guide on 64-Segment Ring  
-6. Clear Voice Alerts You Can Mute (Siren Stays On)  
-7. Where Families Place It  
+3. Matter Status and Notifications（≠ interconnect）  
+4. Same-Brand Wireless Alerts（≠ wired AC interconnect）  
+5. Smoke Hush / CO Cannot Be Silenced  
+6. Designed to Be Seen — Low Profile · Battery  
+7. Where Families Place It（禁房间名 Nest 剧本）  
 8. Install and Indicator Guide  
-9. What's in the Box  
-10. Specs at a Glance  
-11. Care, Test and Replace  
+9. What's in the Box / Specs / Care  
 
 ---
 
@@ -74,7 +94,9 @@ fire alarm co alarm combination detector carbon monoxide alarm nuisance reductio
 | 语种 | **EN 主**；包材 **+DE+FR**；其余 Listing 语种二期 |
 | CE / EN14604 / EN50291 | 待确认（禁虚构证书号） |
 | 用词 | UK 可用 Smoke & Carbon Monoxide **Alarm** |
-| Matter | 仅 status / notifications；≠消防互联 |
+| Matter | 仅 status / notifications；≠消防互联；≠无线级联替代 |
+| 无线级联 | 同品牌 wireless whole-home；**分列**写清 **not** wired AC interconnect |
+| Hush | 烟临时静音；**CO 禁静音**；禁 Nest 房间剧本 |
 | 抗误报 | reduced nuisance / cooking steam；DE/FR 设计目标语气 |
 
 ---
@@ -95,7 +117,7 @@ fire alarm co alarm combination detector carbon monoxide alarm nuisance reductio
 |----|------|--------|
 | EX 含 UKCA；EN 主 + 包材 DE/FR | **已锁** | Heiman / 市场产品 |
 | 品牌名 / 商品名 | 待确认 | Leo · 市场产品 |
-| SKU-CN 一期是否含 CO | **默认无 CO（已锁）** | 市场产品；有变再开版本 |
+| SKU-CN 一期是否含 CO | 待确认 | 市场产品 |
 | 电源 SKU / 分 ASIN | 待确认 | 设计制造 · 硬件 |
 | 抗误报对外证据冻结 | 待确认 | 研发 · 测试 |
 | UL/ETL；CE；EN 证书号 | 待确认 | 测试 · 市场产品 |
@@ -136,65 +158,3 @@ fire alarm co alarm combination detector carbon monoxide alarm nuisance reductio
 
 
 > Listing **v0.2.1**：收入设计制造可上图 3 条 + 财务 G5 价带（仅内部）。暂不上架、前台不写死价。
-
----
-
-## 8. 路径光 / 语音 Listing 备稿（v0.2.4 · 依自研规格 v0.3）
-
-> 来源：`01_市场产品/路径光语音_自研体验规格_v0.1.md` + 设计制造差异化页。  
-> **纪律**：不上架；不写 Nest / Nightly Promise / Heads-Up / better than Nest；不加第四主卖点。  
-> **市场产品 v0.3**：感受层可备（premium night path light / clear voice alerts）；视觉话术等 ID 概念板 v0.2；上架仍须 G2 + Leo。
-
-### 8.1 可写（功能层）
-
-| 场景 | EN 备稿 | 禁写 |
-|------|---------|------|
-| 路径光 | Wow RGB night path light — 64-segment ring with rotating/flowing guide; distinct alarm pulses | Nest 名、大环面、Nightly Promise、未验证秒数 |
-| 语音 | Clear voice alerts: short, hard event + action (final EN/CN lines TBD). Voice off OK; siren and lights stay on. | Heads-Up 长剧本、Nest 房间句式、竞品名 |
-| 设计 | Ultra-slim ceiling disc; segmented thin-ring light language — premium, not a wide decorative halo | Nest 可识别大环面/造型 |
-
-### 8.2 A+ / 图注备稿（短）
-
-- **Night Path Light**: Wow path lighting on a dense segmented thin ring — points the way; pulsing patterns for smoke vs CO vs fault.  
-- **Voice Alerts**: Short, clear spoken cues you can mute — the alarm sound and lights never mute.  
-
-### 8.3 包材一行（EX EN）
-
-`Ultra-slim white · premium RGB path light · Rotating guide · Clear voice alerts · Matter status`
-
-### 8.4 仍待联调（不挡备稿收口）
-
-- 语音英文句表 / 自研时序进 ICD（软件）  
-- 色盲可辨色表与暗室 ≥3 m（测试）  
-- 开模 / 上架：等 G2 + Leo
-
-### 8.5 v0.3 内部应达（不上前台数字）
-
-| 项 | 内部目标 | Listing 前台 |
-|----|----------|--------------|
-| 暗室路径可见 | ≥4 m | 写 premium / clear path，勿写米数直至测通 |
-| 起亮 | ≤0.5 s | 勿写秒数直至测通 |
-| 告警光语 | 烟/CO/故障三套可区分 | 可写 distinct light patterns，勿写色名未定稿 |
-| 语音 | 短硬句；1 m 可懂 | clear voice alerts |
-
-### 9.1 Leo / 规格 §5（已写入 Listing 感受层 · v0.2.9）
-
-| 项 | 正文可写 | 禁写 |
-|----|----------|------|
-| 壳体 | slim white disc | — |
-| 光 | premium RGB path light；rotating / sweep guide on 64-segment ring | Nest、大环面扫场、Nightly Promise |
-| 告警 | distinct color+pulse for smoke / CO / fault | 未定稿色名当事实 |
-| 语音 | clear voice alerts；mute voice only | Heads-Up 剧本 |
-
-仍不上架；主图按白壳 + 细环 RGB 彗星追逐；报警用边缘红脉。
-
-### 9.2 主图锁定（Leo 2026-10-22「可以了」）
-
-| 主图/视频 | 内容 |
-|-----------|------|
-| 主图 | 白壳正面 + 细环 **RGB 彗星追逐/旋转环扫** |
-| 报警图 | 边缘 **红脉**（可区分烟/CO/故障另图） |
-| 辅图 | 侧视薄盘、夜间路径 |
-| 价带 | 内部仍 $89 主推（前台不写死价） |
-| 状态 | **仍不上架**；等 G2 + Leo 批准 |
-
