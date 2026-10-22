@@ -1,0 +1,7 @@
+/*
+ * Auto-loaded by Zephyr. Intentionally assigns no pins.
+ * EVT GPIO numbers stay in HARDWARE_NEEDED.md until @硬件 confirms them.
+ * Do not copy ICD pin-draft numbers into this file.
+ */
+/ {
+};

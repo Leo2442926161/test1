@@ -1,0 +1,12 @@
+# Application Kconfig. EVT image claim stays off.
+
+menu "Zephyr"
+source "Kconfig.zephyr"
+endmenu
+
+config CHAOJI_SMOKE_EVT_IMAGE
+	bool "Produce the EVT flash image"
+	default n
+	help
+	  Leave disabled. This skeleton has no confirmed pinmux and does not
+	  link the host behavior sources. main.c refuses to compile when set.

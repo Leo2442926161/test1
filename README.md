@@ -8,8 +8,9 @@
 | 软件设计包（详设 / 索引 / 缺口） | [超级烟感_项目资料包_v0.1/02_工程/软件/README.md](超级烟感_项目资料包_v0.1/02_工程/软件/README.md) |
 | 结构包（草排索引；无 STEP） | [超级烟感_项目资料包_v0.1/02_工程/结构/README.md](超级烟感_项目资料包_v0.1/02_工程/结构/README.md) |
 | 可执行固件源码 | [`firmware/src/`](firmware/src) · 说明 [`firmware/README.md`](firmware/README.md) |
+| nRF54L15 NCS 骨架（无烧录文件） | [`firmware/nrf/README.md`](firmware/nrf/README.md) · 脚位确认单 [`firmware/nrf/HARDWARE_NEEDED.md`](firmware/nrf/HARDWARE_NEEDED.md) |
 | ICD 现行版 | [超级烟感_项目资料包_v0.1/02_工程/软件/超级烟感_软件硬件_ICD_v0.1.7.md](超级烟感_项目资料包_v0.1/02_工程/软件/超级烟感_软件硬件_ICD_v0.1.7.md) |
-| nRF54L15 镜像与 EVT 电流样 | [Issue #15](https://github.com/Leo2442926161/test1/issues/15)（未关闭） |
+| nRF54L15 镜像与 EVT 电流样 | [Issue #15](https://github.com/Leo2442926161/test1/issues/15)（未关闭；`ncs_board_build` 仍为 false） |
 
 `firmware/` 中的 `fw-hush-relay-0.1.0-evt` 是宿主可测行为模型（`image=host-sim`）。烧录镜像仍由 Issue #15 交付。
 
