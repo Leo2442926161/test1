@@ -6,6 +6,7 @@
 |---|---|
 | 资料包总索引 | [超级烟感_项目资料包_v0.1/README.md](超级烟感_项目资料包_v0.1/README.md) |
 | 软件设计包（详设 / 索引 / 缺口） | [超级烟感_项目资料包_v0.1/02_工程/软件/README.md](超级烟感_项目资料包_v0.1/02_工程/软件/README.md) |
+| 结构包（草排索引；无 STEP） | [超级烟感_项目资料包_v0.1/02_工程/结构/README.md](超级烟感_项目资料包_v0.1/02_工程/结构/README.md) |
 | 可执行固件源码 | [`firmware/src/`](firmware/src) · 说明 [`firmware/README.md`](firmware/README.md) |
 | ICD 现行版 | [超级烟感_项目资料包_v0.1/02_工程/超级烟感_软件硬件_ICD_v0.1.7.md](超级烟感_项目资料包_v0.1/02_工程/超级烟感_软件硬件_ICD_v0.1.7.md) |
 | nRF54L15 镜像与 EVT 电流样 | [Issue #15](https://github.com/Leo2442926161/test1/issues/15)（未关闭） |
