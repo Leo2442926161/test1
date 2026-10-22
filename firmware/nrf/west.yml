@@ -1,0 +1,19 @@
+# Workspace manifest for the nRF54L15 skeleton.
+# west update clones nRF Connect SDK; this repository does not vendor it.
+# Revision checked 2026-10-22 against github.com/nrfconnect/sdk-nrf releases:
+# v3.4.1 (published 2026-09-17). Not an EVT flash image.
+
+manifest:
+  self:
+    path: test1
+
+  remotes:
+    - name: ncs
+      url-base: https://github.com/nrfconnect
+
+  projects:
+    - name: nrf
+      remote: ncs
+      repo-path: sdk-nrf
+      revision: v3.4.1
+      import: true
