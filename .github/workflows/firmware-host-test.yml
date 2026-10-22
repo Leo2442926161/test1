@@ -1,0 +1,15 @@
+name: firmware-host-test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  host-sim:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and run hush/cascade/SED host tests
+        run: make -C firmware test
+      - name: Check source package hashes
+        run: make -C firmware verify
