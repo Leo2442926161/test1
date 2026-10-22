@@ -1,0 +1,7 @@
+matter_role=notify_only
+matter_equals_cascade=false
+wired_interconnect=false
+ac_interconnect_wire_claim=false
+ul_en_wired_multiple_station_claim=false
+allowed_wording=同品牌无线跟报
+allowed_wording=Matter 状态/事件通知
