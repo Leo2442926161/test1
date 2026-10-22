@@ -1,0 +1,89 @@
+{
+  "version": "fw-hush-relay-0.1.0-evt",
+  "icd_baseline": "v0.1.7",
+  "image": "host-sim",
+  "mcu_target": "nRF54L15",
+  "ncs_board_build": false,
+  "build_time_utc": "2026-10-22T06:31:49Z",
+  "primary_artifact": "dist/fw-hush-relay-0.1.0-evt-src.tar.gz",
+  "primary_sha256": "8e0aad9b237b4dfccef37da4ab51ee65ccd5d471ff58a020404cd0c17470ea3d",
+  "hush_smoke_s": 540,
+  "test_hooks": [
+    "hush_active",
+    "hush_remaining_s",
+    "hush_remain_s",
+    "hush_reject",
+    "hush_reject_reason",
+    "alarm_relay_tx",
+    "alarm_relay_rx",
+    "relay_enable",
+    "HUSH_SMOKE_S",
+    "ux_light_set",
+    "ux_light_get_status"
+  ],
+  "artifacts": [
+    {
+      "path": "include/fw.h",
+      "sha256": "5ee15e04004d3afeedc1ba037e8feb02a38a790887577fae001b00a8732e2634"
+    },
+    {
+      "path": "src/fw_node.c",
+      "sha256": "d3bf17fb9eaec58fae7031877499263eb1bf14340ffceafc6532f95e89a278b8"
+    },
+    {
+      "path": "src/fw_ux.c",
+      "sha256": "e8b3ea847c32b85bf3c9ef3ea768ea50f3b2ab482628317580b24e22dd35e592"
+    },
+    {
+      "path": "src/fw_status.c",
+      "sha256": "57e0b11f7c3c9c36a8912c60dc3ef3fa7d4f1a880790b22bf24861634a7d3292"
+    },
+    {
+      "path": "src/fw_sim.c",
+      "sha256": "8f719f1523d317472832c64f728db19744417077a56f21bc99d558c9d3d4a35e"
+    },
+    {
+      "path": "test/test_fw.c",
+      "sha256": "26c0dd3e838e3164d9db0d5f1b6a451c5e98a352258e9cf61f7ebebe8e9beee8"
+    },
+    {
+      "path": "test/cli_hooks.sh",
+      "sha256": "cba76cdfbc05b4485ecd2be0e3ec64dda77d36527524c6a2c432b8bea6ea7a46"
+    },
+    {
+      "path": "policy/claims.txt",
+      "sha256": "44b292b1976861f7758e409119b01308ea829f09a1f70a0e35b7c03896837f5c"
+    },
+    {
+      "path": "Makefile",
+      "sha256": "0c84249e15526aa7ed44097dba743dfa0d76ff144685b8c0dfa52cad9b13e11b"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b3a19b6f76552a19d2bb852d3d9dc4c4296b9b34c46653331b20e16849430664"
+    },
+    {
+      "path": "tools/gen_manifest.py",
+      "sha256": "d7db3a8aad3b918a161621592f04d8a6631726c89023f817e05896541e31216d"
+    },
+    {
+      "path": "dist/fw-hush-relay-0.1.0-evt-src.tar.gz",
+      "sha256": "8e0aad9b237b4dfccef37da4ab51ee65ccd5d471ff58a020404cd0c17470ea3d"
+    },
+    {
+      "path": "build/fw_sim",
+      "sha256": "aee80bce73aa293288a3c86e2a77ab155a84a6d4a6c443b0db80eca8d457768f",
+      "note": "host build, not an nRF image"
+    },
+    {
+      "path": "build/test_fw",
+      "sha256": "86a546d359094a9e9ee96d143e09432fa5471d7b6023dc1f741df36c51732b5b",
+      "note": "host build, not an nRF image"
+    }
+  ],
+  "notes": [
+    "primary_sha256 identifies the portable source package.",
+    "build/fw_sim sha256 is the linux host binary from this build and is not a flash image.",
+    "Current numbers inside the sim are design-assumption clamps, not lab measurements."
+  ]
+}
