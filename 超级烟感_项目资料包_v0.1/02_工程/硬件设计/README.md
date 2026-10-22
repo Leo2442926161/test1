@@ -3,9 +3,11 @@
 **日期**：2026-10-22（Asia/Shanghai）  
 **位置**：`超级烟感_项目资料包_v0.1/02_工程/硬件设计/`。`docs/` 已永久取消，`docs/02_硬件/` 不存在。  
 **Issue**：https://github.com/Leo2442926161/test1/issues/20  
-**范围**：现行硬件 Markdown 的索引。骨架而已。https://github.com/Leo2442926161/test1/issues/20 在 EVT 的 EDA 工程和 Gerber 进仓之前保持打开。
+**范围**：现行硬件 Markdown 的索引。骨架而已。
 
-本目录**没有** KiCad / Altium 工程、**没有** Gerber / 钻孔 / 装配图、**没有**锁定料号 BOM。下列 `PLACEHOLDER.md` 只写阻塞，不代替这些文件。
+**#20**：仍堵 [#8](https://github.com/Leo2442926161/test1/issues/8) + [#15](https://github.com/Leo2442926161/test1/issues/15) + [#17](https://github.com/Leo2442926161/test1/issues/17)。本目录**禁 Gerber、禁 EDA**（无 KiCad / Altium 工程，无钻孔、无装配图）。螺柱现行 **R=41.6×3**（下表）。#20 在这三件事解开、且 EDA 与 Gerber 真进仓之前保持打开。
+
+本目录**没有**锁定料号 BOM。`PLACEHOLDER.md` 与缺口表只写阻塞，不代替可采购 BOM。
 
 ---
 
@@ -33,6 +35,7 @@
 |---|---|
 | `超级烟感_原理图正式版说明_v0.1.md` | 分页说明 + 文内网表 v0.2.0-freeze（Markdown） |
 | `超级烟感_原理图网表骨架_v0.1.2.md` | 迁入的唯一网表骨架（64×可寻址 RGB） |
+| [`../ICD/超级烟感_ICD对齐一页_v0.1.md`](ICD/超级烟感_ICD对齐一页_v0.1.md) | 对照软件现行 ICD v0.1.7 与本网表：一致项 + 差异/开放项 |
 | `PLACEHOLDER.md` | 无 EDA 工程 |
 
 非现行，已收入 [`_archive/`](_archive/)：[`网表骨架 v0.1`](_archive/超级烟感_原理图网表骨架_v0.1.md)、[`v0.1.1`](_archive/超级烟感_原理图网表骨架_v0.1.1.md)（v0.1.1 默认 I2C 灯驱，已被 v0.1.2 取代）。
@@ -51,7 +54,9 @@
 | 文件 | 是什么 |
 |---|---|
 | `超级烟感_硬件选型采购互检_v0.1.md` | 假设级选型互检，注明不下单 |
-| `PLACEHOLDER.md` | 锁定料号 BOM 堵在 [#8](https://github.com/Leo2442926161/test1/issues/8) CO OEM 实价 |
+| `超级烟感_BOM缺口表_v0.1.md` | 占位缺口表。TI 分立光学 PN **未锁**。单价/交期列仍是「待采购/待 #8」；文末只摘采购交期页结论 |
+| `Figaro_TGS5141_Nemoto_NAP508_询价技术要点.md` | CO 询价技术要点。联系人留空给 Leo。**硬件不代发** |
+| `PLACEHOLDER.md` | 锁定料号 BOM 堵在 [#8](https://github.com/Leo2442926161/test1/issues/8) CO TGS5141 实价 |
 
 ### 电源射频/
 
