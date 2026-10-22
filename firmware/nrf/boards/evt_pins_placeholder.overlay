@@ -1,0 +1,10 @@
+/*
+ * Not a board target. Zephyr does not auto-apply this name.
+ * Signals that still need a pin (all PIN_TBD, no numbers in this file):
+ *   UART_DBG TX, UART_DBG RX, SWDIO, SWCLK, RESET
+ *   LED_RGB_EN, LED_RGB_DATA, LED_RGB_CLK
+ *   VBAT_SENSE
+ * See ../HARDWARE_NEEDED.md.
+ */
+/ {
+};

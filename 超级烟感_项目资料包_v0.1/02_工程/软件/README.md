@@ -17,6 +17,7 @@
 | 路径光 / 语音 FSM v0.3 | [`超级烟感_路径光语音_FSM短句草案_v0.3.md`](超级烟感_路径光语音_FSM短句草案_v0.3.md) |
 | 语音短句 v0.1.1（文案，无播放器） | [`超级烟感_语音短句_v0.1.1.md`](超级烟感_语音短句_v0.1.1.md) |
 | 固件包说明 | [`../../../firmware/README.md`](../../../firmware/README.md) |
+| NCS 骨架（无 `.hex` / `.elf`） | [`../../../firmware/nrf/README.md`](../../../firmware/nrf/README.md) · [`HARDWARE_NEEDED.md`](../../../firmware/nrf/HARDWARE_NEEDED.md)。`ncs_board_build` 仍为 false |
 | 固件源码 | [`../../../firmware/src/`](../../../firmware/src)（`fw_node.c` `fw_ux.c` `fw_status.c` `fw_sim.c`） |
 | 公共头文件 | [`../../../firmware/include/fw.h`](../../../firmware/include/fw.h) |
 | 文案策略锁 | [`../../../firmware/policy/claims.txt`](../../../firmware/policy/claims.txt) |
@@ -39,7 +40,7 @@ G3 验收单在 `04_测试/验收单/`。这里只做链接，不复制正文，
 | `firmware/src/fw_sim.c`、`firmware/test/` | **已实现，仅宿主**。CLI 与 `test_fw`。不进芯片。 |
 | `firmware/policy/claims.txt` | **已实现**。锁 `matter_role=notify_only`，并锁掉有线互联 / UL·EN 多站互联声称。 |
 | `firmware/dist/fw-hush-relay-0.1.0-evt-src.tar.gz` | **已实现**。可移植源码包。`build/fw_sim` 的 SHA 随编译器变化，不是烧录哈希。 |
-| nRF Connect SDK 工程、board overlay、`.hex` / `.elf` | **待补**。负责人：软件。跟踪 [#15](https://github.com/Leo2442926161/test1/issues/15)。 |
+| nRF Connect SDK 骨架 | **骨架在** [`firmware/nrf/`](../../../firmware/nrf)。`west.yml` 指向 NCS v3.4.1。无 `.hex` / `.elf`，未跑 `west build`，`ncs_board_build=false`。脚号未写入 overlay。负责人：软件。跟踪 [#15](https://github.com/Leo2442926161/test1/issues/15)。 |
 | Matter 协议栈、手机 App、OTA / MCUboot | **待补**。负责人：软件。见缺口清单。 |
 | EVT 电流 / Vbat 样 | **待补**。宿主套件对 `TC-CASCADE-PWR-01` 打印 SKIP，不填毫安读数。负责人：软件交样、测试出通过/退回单。跟踪 [#15](https://github.com/Leo2442926161/test1/issues/15)。 |
 

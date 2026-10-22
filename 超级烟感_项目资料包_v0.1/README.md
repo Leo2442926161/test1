@@ -14,6 +14,7 @@
 | 项 | 位置 |
 |---|---|
 | 可执行代码 | 仓库顶层 [`firmware/src/`](../firmware/src)（宿主 sim `fw-hush-relay-0.1.0-evt`，说明见 [`firmware/README.md`](../firmware/README.md)） |
+| NCS 骨架 | [`firmware/nrf/`](../firmware/nrf)（无烧录文件；`ncs_board_build` 仍为 false） |
 | ICD 现行版 | [`02_工程/软件/超级烟感_软件硬件_ICD_v0.1.7.md`](02_工程/软件/超级烟感_软件硬件_ICD_v0.1.7.md) |
 | 实机镜像与 EVT 电流 | [Issue #15](https://github.com/Leo2442926161/test1/issues/15) |
 
