@@ -2,7 +2,8 @@
 
 **日期**：2026-10-22（Asia/Shanghai）  
 **本目录**：软件设计包（角色与工作流、索引、详细设计、缺口清单、ICD v0.1.7、FSM v0.3、语音短句 v0.1.1）。  
-**可执行代码**：资料包根 [`firmware/src/`](../../firmware/src)，包名 `fw-hush-relay-0.1.0-evt`。  
+**可执行代码**：资料包根 [`../../firmware/src/`](../../firmware/src)，包名 `fw-hush-relay-0.1.0-evt`。  
+**锁定路径**：`超级烟感_项目资料包_v0.1/firmware/`（本目录相对链接 [`../../firmware/`](../../firmware/)）。不在仓顶，也不在 `02_工程/软件/firmware/`。  
 **实机**：nRF54L15 烧录镜像与 EVT 电流样归 [Issue #15](https://github.com/Leo2442926161/test1/issues/15)。本目录不放 `.hex` / `.elf`，也不放实验室通过证书。
 
 `超级烟感_项目资料包_v0.1/firmware/README.md` 已写明：这是对齐 ICD v0.1.7 的宿主 C 行为模型，不是 nRF54L15 烧录镜像，也没有链接 nRF Connect SDK。源码包身份以 `超级烟感_项目资料包_v0.1/firmware/MANIFEST.json` 的 `primary_sha256` 为准（当前 `8e0aad9b237b4dfccef37da4ab51ee65ccd5d471ff58a020404cd0c17470ea3d`）。G3 钩子验收单核对的是这一包，本索引不改那些字节。该 README 路径表里的「仓库顶层」是源码包哈希内的旧句；现行位置是资料包根，不要按它再挪到 `02_工程/firmware/` 或仓顶。
@@ -41,7 +42,7 @@ G3 验收单在 `04_测试/验收单/`。这里只做链接，不复制正文，
 | `超级烟感_项目资料包_v0.1/firmware/src/fw_sim.c`、`超级烟感_项目资料包_v0.1/firmware/test/` | **已实现，仅宿主**。CLI 与 `test_fw`。不进芯片。 |
 | `超级烟感_项目资料包_v0.1/firmware/policy/claims.txt` | **已实现**。锁 `matter_role=notify_only`，并锁掉有线互联 / UL·EN 多站互联声称。 |
 | `超级烟感_项目资料包_v0.1/firmware/dist/fw-hush-relay-0.1.0-evt-src.tar.gz` | **已实现**。可移植源码包。`build/fw_sim` 的 SHA 随编译器变化，不是烧录哈希。 |
-| nRF Connect SDK 骨架 | **骨架在** [`firmware/nrf/`](../../firmware/nrf)。`west.yml` 指向 NCS v3.4.1。无 `.hex` / `.elf`，未跑 `west build`，`ncs_board_build=false`。脚号未写入 overlay。负责人：软件。跟踪 [#15](https://github.com/Leo2442926161/test1/issues/15)。 |
+| nRF Connect SDK 骨架 | **骨架在** [`../../firmware/nrf/`](../../firmware/nrf)。`west.yml` 指向 NCS v3.4.1。无 `.hex` / `.elf`，未跑 `west build`，`ncs_board_build=false`。脚号未写入 overlay。负责人：软件。跟踪 [#15](https://github.com/Leo2442926161/test1/issues/15)。 |
 | Matter 协议栈、手机 App、OTA / MCUboot | **待补**。负责人：软件。见缺口清单。 |
 | EVT 电流 / Vbat 样 | **待补**。宿主套件对 `TC-CASCADE-PWR-01` 打印 SKIP，不填毫安读数。负责人：软件交样、测试出通过/退回单。跟踪 [#15](https://github.com/Leo2442926161/test1/issues/15)。 |
 

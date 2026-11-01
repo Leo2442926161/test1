@@ -2,7 +2,7 @@
 
 超级烟感的资料和固件在这一个仓库里。GitHub 根上是两样：本 README、`超级烟感_项目资料包_v0.1/`。固件在资料包根 [`超级烟感_项目资料包_v0.1/firmware/`](超级烟感_项目资料包_v0.1/firmware/)，仓顶不再放 `firmware/`。
 
-`firmware/` 归软件，方便 `make` 和 CI。它在资料包根，不在 `02_工程/软件/` 下再放一套树。里面的 `fw-hush-relay-0.1.0-evt` 是宿主 sim（`image=host-sim`），不是 nRF54L15 烧录镜像。
+[`超级烟感_项目资料包_v0.1/firmware/`](超级烟感_项目资料包_v0.1/firmware/) 归软件，方便 `make` 和 CI。不在仓顶，也不在 `02_工程/软件/` 下再放一套树。里面的 `fw-hush-relay-0.1.0-evt` 是宿主 sim（`image=host-sim`），不是 nRF54L15 烧录镜像。
 
 ## 从这里进
 
