@@ -1,6 +1,7 @@
 # 超级烟感 · 软件索引 v0.1
 
 **日期**：2026-10-22（Asia/Shanghai）  
+**补记**：2026-11-01。#15 的 NCS 应用已链上 `fw_node` / `fw_ux` / `fw_status` 与钩子会话。仍无 `.hex` / `.elf`，`ncs_board_build` 仍为 false。  
 **本目录**：软件设计包（角色与工作流、索引、详细设计、缺口清单、ICD v0.1.7、FSM v0.3、语音短句 v0.1.1）。  
 **可执行代码**：资料包根 [`../../firmware/src/`](../../firmware/src)，包名 `fw-hush-relay-0.1.0-evt`。  
 **锁定路径**：`超级烟感_项目资料包_v0.1/firmware/`（本目录相对链接 [`../../firmware/`](../../firmware/)）。不在仓顶，也不在 `02_工程/软件/firmware/`。  
@@ -19,7 +20,7 @@
 | 路径光 / 语音 FSM v0.3 | [`超级烟感_路径光语音_FSM短句草案_v0.3.md`](超级烟感_路径光语音_FSM短句草案_v0.3.md) |
 | 语音短句 v0.1.1（文案，无播放器） | [`超级烟感_语音短句_v0.1.1.md`](超级烟感_语音短句_v0.1.1.md) |
 | 固件包说明 | [`../../firmware/README.md`](../../firmware/README.md) |
-| NCS 骨架（无 `.hex` / `.elf`） | [`../../firmware/nrf/README.md`](../../firmware/nrf/README.md) · [`HARDWARE_NEEDED.md`](../../firmware/nrf/HARDWARE_NEEDED.md)。`ncs_board_build` 仍为 false |
+| NCS 应用（无 `.hex` / `.elf`） | [`../../firmware/nrf/README.md`](../../firmware/nrf/README.md) · [`HARDWARE_NEEDED.md`](../../firmware/nrf/HARDWARE_NEEDED.md)。钩子会话在 `firmware/nrf/src/hook_session.c`。`ncs_board_build` 仍为 false |
 | 固件源码 | [`../../firmware/src/`](../../firmware/src)（`fw_node.c` `fw_ux.c` `fw_status.c` `fw_sim.c`） |
 | 公共头文件 | [`../../firmware/include/fw.h`](../../firmware/include/fw.h) |
 | 文案策略锁 | [`../../firmware/policy/claims.txt`](../../firmware/policy/claims.txt) |
@@ -42,7 +43,7 @@ G3 验收单在 `04_测试/验收单/`。这里只做链接，不复制正文，
 | `超级烟感_项目资料包_v0.1/firmware/src/fw_sim.c`、`超级烟感_项目资料包_v0.1/firmware/test/` | **已实现，仅宿主**。CLI 与 `test_fw`。不进芯片。 |
 | `超级烟感_项目资料包_v0.1/firmware/policy/claims.txt` | **已实现**。锁 `matter_role=notify_only`，并锁掉有线互联 / UL·EN 多站互联声称。 |
 | `超级烟感_项目资料包_v0.1/firmware/dist/fw-hush-relay-0.1.0-evt-src.tar.gz` | **已实现**。可移植源码包。`build/fw_sim` 的 SHA 随编译器变化，不是烧录哈希。 |
-| nRF Connect SDK 骨架 | **骨架在** [`../../firmware/nrf/`](../../firmware/nrf)。`west.yml` 指向 NCS v3.4.1。无 `.hex` / `.elf`，未跑 `west build`，`ncs_board_build=false`。脚号未写入 overlay。负责人：软件。跟踪 [#15](https://github.com/Leo2442926161/test1/issues/15)。 |
+| nRF Connect SDK 应用 | **未烧录**。[`../../firmware/nrf/`](../../firmware/nrf) 的 `CMakeLists.txt` 链入 `fw_node.c`、`fw_ux.c`、`fw_status.c`（宿主 CLI 不进应用）。`hook_session` 打同一份钩子 JSON。RTT/UART 写函数返回 -1。无 `.hex` / `.elf`，2026-11-01 仍无 `west` 工具链，`ncs_board_build=false`。`app.overlay` 无脚号。负责人：软件。跟踪 [#15](https://github.com/Leo2442926161/test1/issues/15)。 |
 | Matter 协议栈、手机 App、OTA / MCUboot | **待补**。负责人：软件。见缺口清单。 |
 | EVT 电流 / Vbat 样 | **待补**。宿主套件对 `TC-CASCADE-PWR-01` 打印 SKIP，不填毫安读数。负责人：软件交样、测试出通过/退回单。跟踪 [#15](https://github.com/Leo2442926161/test1/issues/15)。 |
 
@@ -77,3 +78,9 @@ make -C 超级烟感_项目资料包_v0.1/firmware verify
 ```
 
 `test` 编译并运行 `超级烟感_项目资料包_v0.1/firmware/test/test_fw.c` 与 `超级烟感_项目资料包_v0.1/firmware/test/cli_hooks.sh`。现行宿主结果是 **pass=28 fail=0 skip=1**。`verify` 核对源码包字节，不烧录。
+
+钩子会话的宿主链接检查（不编镜像、不改 MANIFEST）：
+
+```sh
+make -C 超级烟感_项目资料包_v0.1/firmware/nrf/hostcheck test
+```
