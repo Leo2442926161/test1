@@ -15,9 +15,9 @@
 
 行为基线是 ICD v0.1.7，文件在软件目录（PR #30 之后，不在 `02_工程/` 根上）：
 
-[`超级烟感_项目资料包_v0.1/02_工程/软件/超级烟感_软件硬件_ICD_v0.1.7.md`](../../超级烟感_项目资料包_v0.1/02_工程/软件/超级烟感_软件硬件_ICD_v0.1.7.md)
+[`超级烟感_项目资料包_v0.1/02_工程/软件/超级烟感_软件硬件_ICD_v0.1.7.md`](../../02_工程/软件/超级烟感_软件硬件_ICD_v0.1.7.md)
 
-索引：[`超级烟感_项目资料包_v0.1/02_工程/软件/README.md`](../../超级烟感_项目资料包_v0.1/02_工程/软件/README.md)。
+索引：[`超级烟感_项目资料包_v0.1/02_工程/软件/README.md`](../../02_工程/软件/README.md)。
 
 ## 本目录是什么
 
@@ -48,18 +48,18 @@
 在含有本 `west.yml` 的分支上，于仓库外建工作区（会克隆 SDK，体积大）：
 
 ```sh
-west init -m https://github.com/Leo2442926161/test1.git --mr <branch> --mf firmware/nrf/west.yml ncs-ws
+west init -m https://github.com/Leo2442926161/test1.git --mr <branch> --mf 超级烟感_项目资料包_v0.1/firmware/nrf/west.yml ncs-ws
 cd ncs-ws
 west update
-west build -b nrf54l15dk/nrf54l15/cpuapp --no-sysbuild test1/firmware/nrf
+west build -b nrf54l15dk/nrf54l15/cpuapp --no-sysbuild test1/超级烟感_项目资料包_v0.1/firmware/nrf
 ```
 
-`<branch>` 用含 `firmware/nrf/west.yml` 的分支。`self.path` 在 `west.yml` 里是 `test1`，所以应用路径是 `ncs-ws/test1/firmware/nrf`。
+`<branch>` 用含 `超级烟感_项目资料包_v0.1/firmware/nrf/west.yml` 的分支。`self.path` 在 `west.yml` 里是 `test1`，所以应用路径是 `ncs-ws/test1/超级烟感_项目资料包_v0.1/firmware/nrf`。
 
 已有 NCS v3.4.1 工作区时，不必再 `west init`。在该工作区里把 `ZEPHYR_BASE` 指到它的 `zephyr/`，然后：
 
 ```sh
-west build -b nrf54l15dk/nrf54l15/cpuapp --no-sysbuild --build-dir /tmp/chaoji-smoke-dk-smoke /path/to/test1/firmware/nrf
+west build -b nrf54l15dk/nrf54l15/cpuapp --no-sysbuild --build-dir /tmp/chaoji-smoke-dk-smoke /path/to/test1/超级烟感_项目资料包_v0.1/firmware/nrf
 ```
 
 `--no-sysbuild` 若被当前 west 拒绝，去掉该参数再编。sysbuild 默认产物一般在 `build/<工程名>/zephyr/zephyr.hex` 与同目录的 `zephyr.elf`。这两种产物都只是 DK 冒烟文件：
@@ -98,4 +98,4 @@ west build -b nrf54l15dk/nrf54l15/cpuapp --no-sysbuild --build-dir /tmp/chaoji-s
 
 ## 宿主回归
 
-本目录不参与 `make -C firmware test` / `make verify`。改宿主 `firmware/src`、`firmware/README.md` 或 `firmware/Makefile` 才会碰源码包哈希。
+本目录不参与 `make -C 超级烟感_项目资料包_v0.1/firmware test` / `make verify`。改宿主 `超级烟感_项目资料包_v0.1/firmware/src`、`超级烟感_项目资料包_v0.1/firmware/README.md` 或 `超级烟感_项目资料包_v0.1/firmware/Makefile` 才会碰源码包哈希。

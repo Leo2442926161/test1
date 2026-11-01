@@ -13,8 +13,8 @@
 
 | 项 | 位置 |
 |---|---|
-| 可执行代码 | 仓库顶层 [`firmware/src/`](../firmware/src)（宿主 sim `fw-hush-relay-0.1.0-evt`，说明见 [`firmware/README.md`](../firmware/README.md)） |
-| NCS 骨架 | [`firmware/nrf/`](../firmware/nrf)（无烧录文件；`ncs_board_build` 仍为 false） |
+| 可执行代码 | 资料包根 [`firmware/src/`](firmware/src)（宿主 sim `fw-hush-relay-0.1.0-evt`，说明见 [`firmware/README.md`](firmware/README.md)） |
+| NCS 骨架 | [`firmware/nrf/`](firmware/nrf)（无烧录文件；`ncs_board_build` 仍为 false） |
 | ICD 现行版 | [`02_工程/软件/超级烟感_软件硬件_ICD_v0.1.7.md`](02_工程/软件/超级烟感_软件硬件_ICD_v0.1.7.md) |
 | 实机镜像与 EVT 电流 | [Issue #15](https://github.com/Leo2442926161/test1/issues/15) |
 
@@ -100,7 +100,7 @@
 
 ### 04_测试/
 
-测试 / DQE 收口。索引见 [`04_测试/README.md`](04_测试/README.md)。**不代填**硬件设计、结构 STEP、`firmware/src`；报告里的实机格保持空白。
+测试 / DQE 收口。索引见 [`04_测试/README.md`](04_测试/README.md)。**不代填**硬件设计、结构 STEP、资料包根 `firmware/src`；报告里的实机格保持空白。
 
 - `测项/` — 全量测项、Hush/级联 **v0.1.2**（v0.1 与 v0.1.1 同 SHA 已删）、SED 超限 **v0.1.1**（v0.1 同 SHA 已删）、G3 阻塞矩阵、UL/EN DQE **v0.1.1**、EVT 灯环电流规程、RF/EMC 预合规计划
 - `验收单/` — G3 钩子验收（宿主 sim，有条件通过）、CLAIM/Matter 文档抽检（含回写摘要附录）

@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build and run hush/cascade/SED host tests
-        run: make -C firmware test
+        run: make -C 超级烟感_项目资料包_v0.1/firmware test
       - name: Check source package hashes
-        run: make -C firmware verify
+        run: make -C 超级烟感_项目资料包_v0.1/firmware verify
