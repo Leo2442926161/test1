@@ -68,12 +68,19 @@
 - `超级烟感_UL_EN认证_DQE测项与送检样机_v0.1.1.md`（stub：正文在 `04_测试/测项/`，供认证主稿相对链接）
 
 ### 02_工程/软件/
-- `README.md` — 软件索引（`firmware/src`、ICD v0.1.7、G3 钩子验收、Issue #15）
+- `README.md` — 软件索引（资料包根 [`firmware/README.md`](firmware/README.md)、ICD v0.1.7、G3 钩子验收、Issue #15）
 - `软件详细设计_v0.1.md`
 - `目录与缺口清单_软件_v0.1.md`
 - `超级烟感_软件硬件_ICD_v0.1.7.md` — 现行 ICD。根上 v0.1.3–v0.1.6 与 v0.1.4a 已删除
 - `超级烟感_路径光语音_FSM短句草案_v0.3.md` — 现行 FSM。根上 v0.1 / v0.2 已删除
 - `超级烟感_语音短句_v0.1.1.md`
+
+### firmware/
+
+资料包根，锁定路径 `超级烟感_项目资料包_v0.1/firmware/`。仓顶不再放 `firmware/`，`02_工程/软件/` 下也不再放一套树。
+
+- [`firmware/README.md`](firmware/README.md) — 宿主 sim `fw-hush-relay-0.1.0-evt`（`image=host-sim`）
+- [`firmware/nrf/README.md`](firmware/nrf/README.md) — NCS 骨架（`ncs_board_build` 仍为 false，无烧录文件）
 
 ### 02_工程/结构/
 - [`结构/README.md`](02_工程/结构/README.md) — 结构索引（Issue #17 保持打开）。锁定 Ø135、厚 42 mm、螺柱 R=41.6、灯环 R=58 **ch0–63**。无 STEP / CAD
