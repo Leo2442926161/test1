@@ -33,7 +33,7 @@
 
 | 文件 | 期望 | 实测 | 结果 |
 |---|---|---|---|
-| `firmware/dist/fw-hush-relay-0.1.0-evt-src.tar.gz` | `8e0aad9b237b4dfccef37da4ab51ee65ccd5d471ff58a020404cd0c17470ea3d` | `8e0aad9b237b4dfccef37da4ab51ee65ccd5d471ff58a020404cd0c17470ea3d` | **Pass** |
+| `超级烟感_项目资料包_v0.1/firmware/dist/fw-hush-relay-0.1.0-evt-src.tar.gz` | `8e0aad9b237b4dfccef37da4ab51ee65ccd5d471ff58a020404cd0c17470ea3d` | `8e0aad9b237b4dfccef37da4ab51ee65ccd5d471ff58a020404cd0c17470ea3d` | **Pass** |
 
 ```text
 # 复现
@@ -41,11 +41,11 @@ cd /workspace/fw-hush-relay-g3
 sha256sum firmware/dist/fw-hush-relay-0.1.0-evt-src.tar.gz
 ```
 
-本机重编后 `firmware/build/fw_sim` SHA256 = `372ba0ffbb1f02b07fd4c176564e26a17d90dec8551694951364a48d15d542fa`（≠ PR 自述 `aee80bce…`；属宿主重编差异，不作为退回依据）。
+本机重编后 `超级烟感_项目资料包_v0.1/firmware/build/fw_sim` SHA256 = `372ba0ffbb1f02b07fd4c176564e26a17d90dec8551694951364a48d15d542fa`（≠ PR 自述 `aee80bce…`；属宿主重编差异，不作为退回依据）。
 
 ---
 
-## 2. `make -C firmware test`
+## 2. `make -C 超级烟感_项目资料包_v0.1/firmware test`
 
 | 计数 | 值 |
 |---|---|
