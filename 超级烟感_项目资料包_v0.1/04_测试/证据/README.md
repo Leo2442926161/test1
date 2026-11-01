@@ -13,7 +13,7 @@
 | 证据 | 值 | 出处 |
 |---|---|---|
 | 制品 | `fw-hush-relay-0.1.0-evt` | 验收单文首 |
-| 源码包 | `firmware/dist/fw-hush-relay-0.1.0-evt-src.tar.gz` | 验收单 §1 |
+| 源码包 | `超级烟感_项目资料包_v0.1/firmware/dist/fw-hush-relay-0.1.0-evt-src.tar.gz` | 验收单 §1 |
 | SHA256 | `8e0aad9b237b4dfccef37da4ab51ee65ccd5d471ff58a020404cd0c17470ea3d` | 验收单 §1，期望=实测 |
 | `make test` | `01-make-test.log`；pass=28 fail=0 skip=1 | 验收单 §2 |
 | CLI / 场景 | `02-cli-reset.json` … `15-relay-default.json` | 验收单 §3–§4 |
