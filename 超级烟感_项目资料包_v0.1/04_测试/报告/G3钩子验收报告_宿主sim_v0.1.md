@@ -14,9 +14,9 @@
 |---|---|
 | 结论 | **有条件通过** |
 | Fail | **0** |
-| `make -C firmware test` | **pass 28 / fail 0 / skip 1** |
+| `make -C 超级烟感_项目资料包_v0.1/firmware test` | **pass 28 / fail 0 / skip 1** |
 | 制品 | `fw-hush-relay-0.1.0-evt` |
-| 源码包 | `firmware/dist/fw-hush-relay-0.1.0-evt-src.tar.gz` |
+| 源码包 | `超级烟感_项目资料包_v0.1/firmware/dist/fw-hush-relay-0.1.0-evt-src.tar.gz` |
 | SHA256 | `8e0aad9b237b4dfccef37da4ab51ee65ccd5d471ff58a020404cd0c17470ea3d`（期望 = 实测，Pass） |
 | Head（验收时） | `ba6f34ea36ffe125258aa11be010e8d240042bfd` |
 | PR | https://github.com/Leo2442926161/test1/pull/14 |
