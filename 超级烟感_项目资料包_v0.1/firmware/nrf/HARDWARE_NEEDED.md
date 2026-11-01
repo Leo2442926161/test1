@@ -2,7 +2,8 @@
 
 **给**：@硬件  
 **跟踪**：[Issue #15](https://github.com/Leo2442926161/test1/issues/15) · 非灯脚与产测 UART 等 [#17](https://github.com/Leo2442926161/test1/issues/17)  
-**日期**：2026-10-22  
+**日期**：2026-10-22（脚位表）  
+**软件补记**：2026-11-01。钩子会话已接到骨架；RTT 写入口返回 -1；`UART_DBG` 仍 `PIN_TBD`。本单脚号没有改。不关 #15。  
 **状态**：**草案**，不是终稿。不关 #15。
 
 来源：网表骨架 v0.1.2 + [`原理图正式版说明`](../../02_工程/硬件设计/原理图/超级烟感_原理图正式版说明_v0.1.md) 的冻结网表 **v0.2.0-freeze**。  
@@ -29,7 +30,8 @@
 
 ## 1. 调试口
 
-骨架产测先走 **RTT/SWD**。`UART_DBG` 的 SoC 脚未冻（对齐一页 **ICD-03**），等 #17。钩子 JSON 还没接到 RTT。
+骨架产测先走 **RTT/SWD**。`UART_DBG` 的 SoC 脚未冻（对齐一页 **ICD-03**），等 #17。  
+2026-11-01：`hook_session` 调 `fw_status_json`（字段与宿主 CLI 相同）。计划用 RTT 通道 1 写「JSON 加一个换行」，通道 0 留给日志。`hook_rtt_write` 现在返回 -1，`CONFIG_USE_SEGGER_RTT` 没开。DK 上的 `printk` 只是调试分片，不是产测口。`hook_uart_write` 同样返回 -1。波特率不填。
 
 | 项 | 草案 | 确认 |
 |---|---|---|
@@ -37,7 +39,7 @@
 | SWD | 模组 `SWDIO` / `SWDCLK` / `RESET` | 草案。不写 SoC GPIO 号。量产可以 DNP 隔离电阻（无阻值） |
 | `UART_DBG` TX / RX | `PIN_TBD` | **未冻**。等 #17。不进 overlay |
 | 波特率、RTT 通道号 | 未填 | 未锁 |
-| 钩子是否与日志同口 | 未接 | 字段名仍是 `hush_*` / `alarm_relay_*` / `relay_enable` |
+| 钩子是否与日志同口 | 计划分开：钩子 RTT 通道 1，日志通道 0。UART 不接 | 通道没打开。字段名仍是 `hush_*` / `alarm_relay_*` / `relay_enable`。`relay_enable` 只在 RAM，上电默认 true |
 
 ## 2. `LED_RGB_EN`
 
@@ -102,6 +104,8 @@ ICD 峰值墙是判据，不是读数：持续 >100 ms ≤600 mA，短脉冲 <20
 
 - 不把 `UART_DBG`、SWD 的 SoC 脚、`CONTAM_TP` 或其他传感写进 overlay
 - 不把负载开关极性、分压电阻、分流阻值、灯珠料号写成已确认
+- 不把 `hook_rtt_write` / `hook_uart_write` 的 -1 写成「产测口已通」
+- 不把 DK `printk` 分片当成样机回读
 - 不提交 `.hex` / `.elf`
 - 不修改 `firmware/MANIFEST.json`（`image=host-sim`，`ncs_board_build=false`）
 - 不把本空表写成 `TC-CASCADE-PWR-01` 通过

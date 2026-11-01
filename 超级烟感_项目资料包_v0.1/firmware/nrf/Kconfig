@@ -8,5 +8,7 @@ config CHAOJI_SMOKE_EVT_IMAGE
 	bool "Produce the EVT flash image"
 	default n
 	help
-	  Leave disabled. This skeleton has no confirmed pinmux and does not
-	  link the host behavior sources. main.c refuses to compile when set.
+	  Leave disabled. The application links fw_node, fw_ux, and fw_status
+	  and can print their JSON on the DK console, but RTT is not linked,
+	  UART_DBG is still PIN_TBD, and no west image is checked in.
+	  main.c refuses to compile when this symbol is set.
